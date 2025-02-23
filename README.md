@@ -34,11 +34,11 @@ Play the game:
  
 Perform Q-learning:
 
-### **Notice: Please ensure that your computer has sufficient computing power and that you have ample time for the training before executing the following code. This is because the Q-learning algorithm employed in this project will undergo 500 training cycles. After every 50 training sessions, the Q-table results obtained from the training will be saved, it is not recommended to stop the training process midway.**
+***Notice: Please ensure that your computer has sufficient computing power and that you have ample time for the training before executing the following code. This is because the Q-learning algorithm employed in this project will undergo 500 training cycles. After every 50 training sessions, the Q-table results obtained from the training will be saved, it is not recommended to stop the training process midway.***
 
-### **The currently set 500 training sessions are only for testing purposes. Generally, it is not possible to successfully train the model to clear the game with this number of sessions. If you are determined to train the model and expect to be able to clear the game, you can modify the number of training sessions to 5000 in the Q_learning.py file.**
+***The currently set 500 training sessions are only for testing purposes. Generally, it is not possible to successfully train the model to clear the game with this number of sessions. If you are determined to train the model and expect to be able to clear the game, you can modify the number of training sessions to 5000 in the Q_learning.py file.***
 
-### **If your computer's performance is insufficient to support the completion of the entire training, you can open the result folder in the project directory. This folder contains the Q-table files (in .pkl format) saved from the 50th to the 350th training sessions, you can carry out subsequent operations based on these saved results.**
+***If your computer's performance is insufficient to support the completion of the entire training, you can open the result folder in the project directory. This folder contains the Q-table files (in .pkl format) saved from the 50th to the 350th training sessions, you can carry out subsequent operations based on these saved results.***
 
 	python Q-learning.py
 
