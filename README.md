@@ -58,40 +58,40 @@ XX-YY represents reading all pkl files between XX and YY, for example: 50-350 re
 
 ## **Code Structure Explanation**
 
-Sprites.py: Defines sprite classes for walls, players, and enemies, including appearance, position, and interaction rules.
+**Sprites.py**: Defines sprite classes for walls, players, 和 enemies, including appearance, position, 和 interaction rules.
 
-Levels.py: Sets up game levels, specifying enemy movement patterns and the positions of walls and gates.
+**Levels.py**: Sets up game levels, specifying enemy movement patterns and the positions of walls and gates.
 
-main.py: The main entry point. Initializes the game environment and game logic for users to play, without Q - learning training.
+**main.py**: The main entry point. Initializes the game environment and game logic for users to play, without Q - learning training.
 
-Q_learning.py: Handles Q - learning training and stores Q - tables at regular intervals.
+**Q_learning.py**: Handles Q - learning training and stores Q - tables at regular intervals.
 
-load.py: Reads stored Q - tables and evaluates training results using clearance rate and score, presenting results in line plots.
+**load.py**: Reads stored Q - tables and evaluates training results using clearance rate and score, presenting results in line plots.
 
 ## **Q - learning Parameter Explanation**
 
-Learning Rate (ALPHA = 0.1): Controls the influence of new experiences on Q - value updates.
+**Learning Rate** (ALPHA = 0.1): Controls the influence of new experiences on Q - value updates.
 
-Discount Factor (GAMMA = 0.9): Balances immediate and future rewards.
+**Discount Factor** (GAMMA = 0.9): Balances immediate and future rewards.
 
-Initial Exploration Rate (INITIAL_EPSILON = 0.9): Determines the initial exploration probability.
+**Initial Exploration Rate** (INITIAL_EPSILON = 0.9): Determines the initial exploration probability.
 
-Exploration Rate Decay Value (EPSILON_DECAY = 0.05): Amount by which exploration rate decreases.
+**Exploration Rate Decay Value** (EPSILON_DECAY = 0.05): Amount by which exploration rate decreases.
 
-Minimum Exploration Rate (MIN_EPSILON = 0.1): Sets the lower limit of exploration rate.
+**Minimum Exploration Rate** (MIN_EPSILON = 0.1): Sets the lower limit of exploration rate.
 
-Exploration Rate Decay Interval (DECAY_INTERVAL = 10): Number of training sessions between decays.
+**Exploration Rate Decay Interval** (DECAY_INTERVAL = 10): Number of training sessions between decays.
 
 ## **Reward Calculation Mechanism**
 
-Collide with Ghost: -100, to avoid fatal collisions.
+**Collide with Ghost**: -100, to avoid fatal collisions.
 
-Eat Food: +10, to encourage food collection.
+**Eat Food**: +10, to encourage food collection.
 
-Clear Level: WIN_BONUS (2000), to motivate level completion.
+**Clear Level**: WIN_BONUS (2000), to motivate level completion.
 
-No Bean Eaten: -NO_BEAN_PENALTY (10), to prevent inactivity.
+**No Bean Eaten**: -NO_BEAN_PENALTY (10), to prevent inactivity.
 
-Exceed Max Steps: -100, to ensure timely decision - making.
+**Exceed Max Steps**: -100, to ensure timely decision - making.
 
-Other Situations: -1, to encourage effective actions.
+**Other Situations**: -1, to encourage effective actions.
